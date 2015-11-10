@@ -100,14 +100,16 @@ a,li{
 	width: 1000px;
 
 }
-.photo{
+.photo {
 	height: 300px;
 	width: 100%;
-	background-color: #102FAA;
+	/*background-color: #102FAA;*/
+	overflow: hidden;
 }
 .photo img{
-	height: 100%;
-	width: 100%;
+	height: 300px;
+	width: 1000px;
+	/*width: 100%;*/
 }
 .say_show{
 	margin: 5px 0;
