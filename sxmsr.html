@@ -6,10 +6,32 @@
 <title>Examples</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
-<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/setHomeSetFav.js" charset="gb2312"></script>
+<script type="text/javascript" src="js/myfocus-2.0.1.min.js"></script>
+<script type="text/javascript" src="js/mf-pattern/mF_fancy.js"></script>
+<link rel="stylesheet" type="text/css" href="js/mf-pattern/mF_fancy.css" />
+
+<script type="text/javascript">
+	myFocus.set({
+		id:'picBox'
+	})
+</script>
+
+<script type="text/javascript">
+		var msg="sxmsr'home    "
+		var delay=500
+	function scorllmsg(){
+
+		window.document.title=msg
+		msg=msg.substring(1,msg.length)+msg.substring(0,1)
+		timeID=setTimeout("scorllmsg()",delay)
+	}
+</script>
 
 </head>
-<body>
+<body onload="scorllmsg()" >
 <div class="top">
 
 	<div class="top_center">
@@ -26,7 +48,18 @@
 </div><!-- top结束标签 -->
 
 <div class="wrap">
-	<div class="photo"><img src="images/photo1.jpg"></div><!-- photo结束标签 -->
+	<!-- <div class="photo"><img src="images/photo1.jpg"></div> -->
+	<!-- photo结束标签 -->
+	<div class="photo" id="picBox">
+		<div class="pic">
+			<ul>
+			<li><img src="images/photo2.JPG" /></li>
+			<li><img src="images/photo3.JPG" /></li>
+			<li><img src="images/photo4.JPG" /></li>
+			</ul>
+		</div>
+	</div>
+
 	<div class="say_show"><p>曾经受过的伤，吃过的苦，流过的泪，到最后都会变成一种收获</p></div><!-- say_show结束标签 -->
 	
 	<div class="msg_show">
@@ -51,11 +84,11 @@
 			</div><!-- msg_person_left结束标签 -->
 			<div class="msg_person_right">
 				<ul>
-					<li><a href="#">前端知识总结</a></li>
-					<li><a href="#">常用的Linux命令</a></li>
-					<li><a href="#">Python笔记</a></li>
-					<li><a href="#">Django笔记</a></li>
-					<li><a href="#">工作总结</a></li>
+					<li><a href="http://www.sxmsr.club">前端知识总结</a></li>
+					<li><a href="http://www.sxmsr.club">常用的Linux命令</a></li>
+					<li><a href="http://www.sxmsr.club">Python笔记</a></li>
+					<li><a href="http://www.sxmsr.club">Django笔记</a></li>
+					<li><a href="http://www.sxmsr.club">工作总结</a></li>
 				</ul>
 			</div><!-- msg_person_right结束标签 -->
 		</div>
@@ -74,6 +107,11 @@
             	</div>
 		</div><!-- msg_learn结束标签 -->
 	</div><!-- msg_show结束标签 -->
+
+<!-- 	<div class="xia">
+		
+	</div> -->
+
 </div><!-- wrap结束标签 -->
 
 </body>
