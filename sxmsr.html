@@ -11,31 +11,34 @@
 <script type="text/javascript" src="js/setHomeSetFav.js" charset="gb2312"></script>
 <script type="text/javascript" src="js/myfocus-2.0.1.min.js"></script>
 <script type="text/javascript" src="js/mf-pattern/mF_fancy.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <link rel="stylesheet" type="text/css" href="js/mf-pattern/mF_fancy.css" />
-
 <script type="text/javascript">
-	myFocus.set({
-		id:'picBox'
-	})
-</script>
-
-<script type="text/javascript">
-		var msg="sxmsr'home    "
+		var msg="曾经受过的伤，吃过的苦，流过的泪，到最后都会变成一种收获!  "
 		var delay=500
 	function scorllmsg(){
-
-		window.document.title=msg
+		//var str = document.getElementById("say_show").innerHTML;
+		document.getElementById("say_show").innerHTML=msg;
 		msg=msg.substring(1,msg.length)+msg.substring(0,1)
 		timeID=setTimeout("scorllmsg()",delay)
 	}
 </script>
+<script type="text/javascript">
+	myFocus.set({
+		id:'picBox'
+	})
+	function window_onscroll() {
+	mytop.style.top=document.body.scrollTop+"px";
+	mytop.style.left=document.body.scrollLeft;
+}
+</script>
 
 </head>
-<body onload="scorllmsg()" >
-<div class="top">
+<body onload="scorllmsg()" onscroll="return window_onscroll()">
+<div class="top" id="mytop" style="left:0px; position: absolute; top:0px;">
 
-	<div class="top_center">
-		<div class="top_pic"><a href="sxmsr.html"><img src="images/top.jpg" ></a></div><!-- top_pic结束标签 -->
+	<div class="top_center"  >
+		<div class="top_pic" ><a href="sxmsr.html"><img src="images/top.jpg" ></a></div><!-- top_pic结束标签 -->
 		<div class="top_content">
 			<ul>
 				<li class="color_4"><a href="sxmsr.html">记录</a></li>
@@ -60,7 +63,7 @@
 		</div>
 	</div>
 
-	<div class="say_show"><p>曾经受过的伤，吃过的苦，流过的泪，到最后都会变成一种收获</p></div><!-- say_show结束标签 -->
+	<div class="say_show" ><p id="say_show">曾经受过的伤，吃过的苦，流过的泪，到最后都会变成一种收获</p></div><!-- say_show结束标签 -->
 	
 	<div class="msg_show">
 		<div class="msg_person">
@@ -113,6 +116,49 @@
 	</div> -->
 
 </div><!-- wrap结束标签 -->
+
+<div class="copyright">
+	<div class="copyright_content">
+		<ul>
+			<li><a href="#"> 关于</a>
+				<ul>
+					<li><a href="#">光阴的故事</a></li>
+					<li><a href="#">曾经的我们</a></li>
+					<li><a href="#">一路走来</a></li>
+					<li><a href="#">风雨同路</a></li>
+				</ul>
+			</li>
+			<li><a href="#"> 学习</a>
+				<ul>
+					<li><a href="#">PHP开发</a></li>
+					<li><a href="#">前端开发</a></li>
+					<li><a href="#">JAVA开发</a></li>
+					<li><a href="#">Android开发</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="#"> 交流</a>
+				<ul>
+					<li><a href="#">新浪微博</a></li>
+					<li><a href="#">腾讯微博</a></li>
+					<li><a href="#">github</a></li>
+					<li><a href="#">ＱＱ空间</a></li>
+					
+				</ul>
+			</li>
+			<li><a href="#"> 关注</a>
+				<ul>
+					<li><a href="#">意见反馈</a></li>
+					<li><a href="#">问题留言</a></li>
+					<li><a href="#">媒体联络</a></li>
+					<li><a href="#">在线客服</a></li>
+					
+				</ul>
+			</li>
+		
+		</ul>
+	</div>
+</div>
 
 </body>
 </html>
